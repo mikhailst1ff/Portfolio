@@ -12,7 +12,7 @@ export const Main = () => {
                    <span>I am Polshin Mikhail</span>
                    <h1>A Web Developer</h1>
                </div>
-               <Photo src={img.src} alt=""/>
+               {/*<Photo src={img.src} alt=""/>*/}
            </FlexWrapper>
         </StyledMain>
     );

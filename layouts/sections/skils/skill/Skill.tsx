@@ -1,5 +1,4 @@
 import React from 'react';
-import {Icon} from '@/components/icon/icon';
 import styled from 'styled-components';
 
 
@@ -12,9 +11,7 @@ type SkillPropsType = {
 export const Skill = (props:any) => {
     return (
         <StyledSkill>
-            <Icon id='Axios'></Icon>
-            <Icon id='docker'></Icon>
-            {/*<SkillTitle>{props.title}</SkillTitle>*/}
+
         </StyledSkill>
     );
 };

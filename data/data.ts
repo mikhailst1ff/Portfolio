@@ -13,7 +13,10 @@ import {
     SiRedux, SiReduxsaga,
     SiStyledcomponents,
     SiWebpack,
-    SiNextdotjs
+    SiNextdotjs,
+    SiTelegram,
+    SiGithub,
+    SiLinkedin,
 } from 'react-icons/si';
 
 import {
@@ -29,15 +32,6 @@ export type SkillType = {
     color: string
 }
 
-export type ProjectType = {
-    title: string
-    demoUrl: string
-    githubUrl: string
-    image: string
-    description: string
-    technologies: string[]
-    badge: string
-}
 
 export const skills: SkillType[] = [
     {
@@ -130,16 +124,6 @@ export const skills: SkillType[] = [
         icon: SiReactquery,
         color: '#ff4154',
     },
-    // {
-    //     title: 'Apollo',
-    //     icon: SiApollographql,
-    //     color: '#fff',
-    // },
-    // {
-    //     title: 'Graph QL',
-    //     icon: SiGraphql,
-    //     color: '#fff',
-    // },
     {
         title: 'Jest',
         icon: SiJest,
@@ -171,3 +155,30 @@ export const skills: SkillType[] = [
         color: '#a259ff',
     },
 ];
+
+export type SocialType ={
+    network:string
+    href:string
+    color:string
+    icon:IconType
+}
+export const social = [
+    {
+        network: 'TG',
+        href: 't.me',
+        icon:SiTelegram,
+        color:'red'
+    },
+    {
+        network: 'LI',
+        href: 't.me',
+        icon:SiLinkedin,
+        color:'red'
+    },
+    {
+        network: 'Git',
+        href: 't.me',
+        icon:SiGithub,
+        color:'red'
+    }
+]

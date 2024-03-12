@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
+import {Icon} from '@/components/icon/icon';
+import {Social} from '@/context/Context';
+import {theme} from '@/styles/theme';
+
 
 export const Menu = () => {
+    const network = useContext(Social);
     return (
         <StyledMenu>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Skils</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contacts</a></li>
+                <ListItem><Link href="">Home</Link></ListItem>
+                <ListItem><Link href="">Skills</Link></ListItem>
+                <ListItem><Link href="">Projects</Link></ListItem>
+                <ListItem><Link href="">Contacts</Link></ListItem>
+                <li>
+                    {network.map(el => <LinkSocial key={el.network}><Icon icon={el.icon} size={'25px'}/>
+                    </LinkSocial>)}
+                </li>
             </ul>
         </StyledMenu>
     );
@@ -18,9 +27,33 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
   }
-  a{
-    color: #1f1f20;
+  @media ${theme.media.tablet}{
+    display: none ;
+  
   }
+`
+const ListItem = styled.li`
+  &:hover{
 
-
+  }
+`
+const Link = styled.a`
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  color: ${theme.colors.primaryText};
+  &:hover {
+    color: ${theme.colors.secondaryText};
+    transform: translateY(-1px);
+  }
+`
+const LinkSocial = styled.a`
+  display: inline-block;
+  color: ${theme.colors.primaryText};
+  padding-right: 20px;
+  cursor: pointer;
+  &:hover{
+    color: ${theme.colors.secondaryText};
+    transform: translateY(-1px);
+  }
 `

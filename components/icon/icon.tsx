@@ -1,6 +1,6 @@
 import React from 'react';
-import { IconContext } from 'react-icons';
 import { IconType } from 'react-icons';
+import styled from 'styled-components';
 
 type PropsType = {
     icon: IconType | string;
@@ -8,12 +8,16 @@ type PropsType = {
     color?: string;
 };
 
-export const Icon: React.FC<PropsType> = ({ icon, size, color }) => {
-    const IconComponent = icon;
+export const Icon: React.FC<PropsType> = ({ icon, size, color,  }) => {
+    const IconComponent = styled(icon)`
+      margin: 0 auto;
+      height: ${size};
+      width: ${size};
+      color: ${color};
+      
+    `
 
     return (
-        <IconContext.Provider value={{ size, color }}>
             <IconComponent />
-        </IconContext.Provider>
     );
 };

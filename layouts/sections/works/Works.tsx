@@ -3,19 +3,38 @@ import styled from 'styled-components';
 import {SectionTitle} from '@/components/SectionTitle';
 import {FlexWrapper} from '@/components/FlexWrapper';
 import {Work} from '@/layouts/sections/works/work/work';
+import {Container} from '@/components/Container';
+
 
 export const Works = () => {
     return (
         <StyledWorks>
-            <SectionTitle>My works</SectionTitle>
-            <FlexWrapper justify={'space-around'}>
-                <Work title={'socialNetwork'} src={''} description={'lorem'}/>
-                <Work title={'todo'} src={''} description={'lorem ipsum'}/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>My works</SectionTitle>
+                <FlexWrapper justify={'space-between'} wrap={'wrap'}>
+                    <Work title={'social Network'} src={''}
+                          description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                          stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    <Work title={'todo'} src={''}
+                          description={'lorem This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                          stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    <Work title={'todo'} src={''}
+                          description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                          stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    <Work title={'todo'} src={''}
+                          description={'vThis is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                          stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    <Work title={'todo'} src={''}
+                          description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                          stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                    <Work title={'todo'} src={''}
+                          description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                          stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
+                </FlexWrapper>
+            </Container>
         </StyledWorks>
     );
 };
 const StyledWorks = styled.section`
-  min-height: 100vh;
-  background-color: antiquewhite;
+
 `

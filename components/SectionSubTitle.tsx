@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import {theme} from '@/styles/theme';
 
-export const SectionTitle = styled.h2`
+export const SectionSubTitle = styled.h2`
   color: ${theme.colors.primaryText};
-  padding: 20px 0;
-  font-weight: 700;
-  font-size: 48px;
+  padding-bottom: 50px;
+  font-weight: 400;
+  font-size: 32px;
   text-align: center;
 `

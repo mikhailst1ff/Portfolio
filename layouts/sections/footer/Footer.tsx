@@ -23,11 +23,12 @@ const StyledFooter = styled.footer`
   text-align: center;
 `
 const SocialIconList = styled.ul`
-  
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 `
 const SocialIconLink = styled.a`
   cursor: pointer;
-  margin-right: 30px;
 `
 const Copyright = styled.small`
 `

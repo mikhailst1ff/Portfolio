@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import {theme} from '@/styles/theme';
+import {font} from '@/styles/common';
 
 export const SectionTitle = styled.h2`
-  color: ${theme.colors.primaryText};
-  padding: 20px 0;
-  font-weight: 700;
-  font-size: 48px;
+  ${font({Fmax:48, Fmin:20, weight:600})};
+  margin-bottom: 60px;
   text-align: center;
 `

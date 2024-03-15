@@ -8,5 +8,8 @@ export const Button = styled.button`
   height: 32px;
   color: white;
   text-transform: uppercase;
-  border: 1px solid #fff
+  border: 1px solid #fff;
+  &:hover{
+  transform: scale(1.05);
+}
 `

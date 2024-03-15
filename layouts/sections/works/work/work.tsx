@@ -5,6 +5,7 @@ import {SiGithub} from 'react-icons/si';
 import {FaLink} from 'react-icons/fa6';
 import proj from '@/assets/image/project2.png'
 import {Button} from '@/components/Button';
+import {theme} from '@/styles/theme';
 
 
 type WorkPropsType = {
@@ -56,11 +57,9 @@ const Link = styled.a`
   }
 `
 const StyledWork = styled.div`
-  margin: 40px 0;
-  max-width: 350px;
-  height: 500px;
-  width: 100%;
-  border-radius: 20px;
+  flex-grow: 1;
+  width: 350px;
+  //border-radius: 30px;
   background-color: rgb(255, 255, 255);
   color: black;
   ${Link} {
@@ -69,29 +68,44 @@ const StyledWork = styled.div`
       margin-left: 20px;
     }
   }
+  @media ${theme.media.desktop}{
+    max-width: 540px;
+  }
 `
 const ImageWrapper = styled.div`
   position: relative;
   ${Button}{
     opacity: 0;
     position: absolute;
-    left: 25%;
+    left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    opacity: 0;
   }
   &:hover {
+    &::before{
+      opacity: 1;
+    }
     ${Button}{
       opacity: 1;
     }
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      border-radius: 20px 20px 0 0;
-      background: rgba(0, 0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
+  }
+  @media ${theme.media.tablet}{
+    &::before{
+      opacity: 1;
+    }
+    ${Button}{
+      opacity: 1;
     }
   }
 `

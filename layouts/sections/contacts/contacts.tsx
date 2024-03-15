@@ -47,9 +47,9 @@ const Field = styled.input`
   letter-spacing: 0.05em;
   background-color: ${theme.colors.primaryWork};
   border: 1px solid ${theme.colors.primaryBorder};
-  color: ${theme.colors.secondaryText};
+  color: ${theme.colors.primaryText};
   &::placeholder{
-    color: ${theme.colors.primaryText};
+    color: ${theme.colors.secondaryText};
   }
   &:focus-visible{
     outline: 1px solid ${theme.colors.primaryBorder}

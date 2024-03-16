@@ -5,10 +5,10 @@ import {Container} from '@/components/Container';
 import {FlexWrapper} from '@/components/FlexWrapper';
 import {MobileMenu} from '@/layouts/header/menu/MobileMenu';
 import {StyledHeader} from '@/layouts/header/Header_styles';
+import {animateScroll as scroll} from 'react-scroll'
 
 export const Header: React.FC = () => {
-
-    const [width, setWidth] = useState(window.innerWidth)
+    const [width, setWidth] = useState(1000)
     const breakpoint = 768
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
-                    <Logo/>
+                    <a href={'#main'} onClick={()=>scroll.scrollToTop()}><Logo/></a>
                     {width < breakpoint ? <MobileMenu/> : <DesktopMenu/>}
                 </FlexWrapper>
             </Container>

@@ -165,7 +165,7 @@ export type SocialType ={
 export const social = [
     {
         network: 'TG',
-        href: 't.me',
+        href: 'https:/t.me/notMikle',
         icon:SiTelegram,
         color:'red'
     },
@@ -177,7 +177,7 @@ export const social = [
     },
     {
         network: 'Git',
-        href: 't.me',
+        href: 'https:/github.com/notMikle',
         icon:SiGithub,
         color:'red'
     }

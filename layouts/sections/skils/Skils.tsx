@@ -10,7 +10,7 @@ import {SkillWrapper, StyledSkills, StyledTitle} from '@/layouts/sections/skils/
 export const Skills: React.FC = () => {
     const skills = useContext(Context);
     return (
-        <StyledSkills>
+        <StyledSkills id='skills'>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionSubTitle>Technologies I’ve been working with recently</SectionSubTitle>

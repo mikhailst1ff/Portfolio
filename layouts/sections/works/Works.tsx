@@ -8,7 +8,7 @@ import {Container} from '@/components/Container';
 
 export const Works: React.FC = () => {
     return (
-        <StyledWorks>
+        <StyledWorks id='projects'>
             <Container>
                 <SectionTitle>My works</SectionTitle>
                 <FlexWrapper justify={'space-around'} wrap={'wrap'} gap={'30px'}>

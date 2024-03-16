@@ -11,7 +11,7 @@ export const Footer = () => {
         <StyledFooter>
             <SectionTitle>You can find me there</SectionTitle>
             <SocialIconList>
-                {network.map(el => <SocialIconLink key={el.network}><Icon icon={el.icon} size={'30px'}/>
+                {network.map(el => <SocialIconLink key={el.network} href={el.href}><Icon icon={el.icon} size={'30px'}/>
                 </SocialIconLink>)}
             </SocialIconList>
             <Copyright>@copyright</Copyright>

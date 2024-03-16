@@ -7,7 +7,8 @@ import {Works} from '@/layouts/sections/works/Works';
 import {Contacts} from '@/layouts/sections/contacts/contacts';
 import {Footer} from '@/layouts/sections/footer/Footer';
 import {GlobalStyle} from '@/styles/GlobalStyled';
-
+import {Particle} from '@/layouts/sections/particle/Particle';
+import React from 'react';
 
 
 export default function Home() {
@@ -16,12 +17,13 @@ export default function Home() {
             <GlobalStyle/>
             <Context.Provider value={skills}>
                 <Social.Provider value={social}>
-                <Header/>
-                <Main/>
-                <Skills/>
-                <Works/>
-                <Contacts/>
-                <Footer/>
+                    <Particle/>
+                    <Header/>
+                    <Main/>
+                    <Skills/>
+                    <Works/>
+                    <Contacts />
+                    <Footer/>
                 </Social.Provider>
             </Context.Provider>
         </>

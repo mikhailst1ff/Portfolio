@@ -7,7 +7,7 @@ import {BurgerButton, LinkWrapper, StyledMenuMobile} from '@/layouts/header/menu
 export const MobileMenu:React.FC = () => {
     const [showBurger, setShowBurger] = useState(false)
     return (
-        <StyledMenuMobile>
+        <StyledMenuMobile onClick={()=>setShowBurger(!showBurger)}>
             <BurgerButton isOpen={showBurger} onClick={()=>setShowBurger(!showBurger)}><span/></BurgerButton>
             <LinkWrapper isOpen={showBurger}>
                 <Menu/>

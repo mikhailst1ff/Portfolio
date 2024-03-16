@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {theme} from '@/styles/theme';
 
 export const StyledSkills = styled.section`
+  position: relative;
   min-height: 100vh;
 `
 export const SkillWrapper = styled.div`

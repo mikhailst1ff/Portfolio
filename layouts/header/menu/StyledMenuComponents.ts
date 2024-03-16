@@ -1,7 +1,9 @@
 import styled, {css} from 'styled-components';
 import {theme} from '@/styles/theme';
+import {Link} from 'react-scroll'
 
 export const StyledMenuMobile = styled.nav`
+ 
 `
 export const StyledMenuDesktop = styled.nav`
   ul {
@@ -17,12 +19,14 @@ export const LinkWrapper = styled.div<{ isOpen: boolean }>`
   left: 0;
   z-index: 9999;
   background-color: rgba(79, 76, 76, 0.88);
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 0.3s;
 
   ${props => props.isOpen && css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: translateY(0%);
   `}
   ul {
     display: flex;
@@ -81,28 +85,43 @@ export const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `
 export const ListItem = styled.li`
-  &:hover {
-  }
 `
-export const Link = styled.a`
+export const NavLink = styled(Link)`
+  position: relative;
   display: inline-block;
   font-size: 20px;
   cursor: pointer;
-  color: ${theme.colors.primaryText};
+  color: ${theme.colors.secondaryText};
 
-  &:hover {
-    color: ${theme.colors.secondaryText};
-    transform: translateY(-1px);
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    transition: 0.6s;
+    height: 2px;
+    background-color: ${theme.colors.primaryText};
+    bottom: 0
   }
+
+  &:hover, &.active {
+    color: ${theme.colors.primaryText};
+    transform: translateY(-1px);
+
+    &::before {
+      width: 100%
+    }
+  }
+}
 `
 export const LinkSocial = styled.a`
   display: inline-block;
-  color: ${theme.colors.primaryText};
+  color: ${theme.colors.secondaryText};
   padding-right: 20px;
   cursor: pointer;
 
   &:hover {
-    color: ${theme.colors.secondaryText};
+    color: ${theme.colors.primaryText};
     transform: translateY(-1px);
   }
 `

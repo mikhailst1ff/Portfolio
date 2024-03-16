@@ -7,7 +7,7 @@ import {theme} from '@/styles/theme';
 
 export const Contacts = () => {
     return (
-        <StyledContacts>
+        <StyledContacts id='contacts'>
             <Container>
                 <SectionTitle>Contacts</SectionTitle>
                 <StyledForm>
@@ -22,6 +22,7 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
+    position: relative;
 `
 const StyledForm = styled.form`
   max-width: 540px;

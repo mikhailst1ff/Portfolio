@@ -115,7 +115,7 @@ export const NavLink = styled(CustomLink)`
   }
 }
 `
-export const LinkSocial = styled(Link)`
+export const LinkSocial = styled.a`
   display: inline-block;
   color: ${theme.colors.secondaryText};
   padding-right: 20px;

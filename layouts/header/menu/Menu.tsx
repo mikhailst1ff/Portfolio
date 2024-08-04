@@ -17,7 +17,7 @@ export const Menu: React.FC = () => {
                 <ListItem><NavLink to={'contacts'} smooth={true} activeClass={'active'}
                                    spy={true}>Contacts</NavLink></ListItem>
                 <li>
-                    {network.map(el => <LinkSocial key={el.network} href={el.href}><Icon icon={el.icon} size={'25px'}/>
+                    {network.map(el => <LinkSocial key={el.network} href={el.href} target="_blank" rel="noopener noreferrer"><Icon icon={el.icon} size={'25px'}/>
                     </LinkSocial>)}
                 </li>
             </ul>

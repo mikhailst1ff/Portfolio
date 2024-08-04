@@ -12,7 +12,7 @@ export const Footer = () => {
         <StyledFooter>
             <SectionTitle>You can find me there</SectionTitle>
             <SocialIconList>
-                {network.map(el => <SocialIconLink key={el.network} href={el.href}><Icon icon={el.icon} size={'30px'}/>
+                {network.map(el => <SocialIconLink key={el.network} href={el.href} target="_blank" rel="noopener noreferrer"><Icon icon={el.icon} size={'30px'}/>
                 </SocialIconLink>)}
             </SocialIconList>
             <Copyright>@copyright</Copyright>
@@ -28,7 +28,7 @@ const SocialIconList = styled.ul`
   justify-content: center;
   gap: 30px;
 `
-const SocialIconLink = styled(Link)`
+const SocialIconLink = styled.a`
   cursor: pointer;
 `
 const Copyright = styled.small`

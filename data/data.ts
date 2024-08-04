@@ -1,29 +1,24 @@
 import {IconType} from 'react-icons';
-import {FaReact, FaYarn} from 'react-icons/fa';
+import {FaReact} from 'react-icons/fa';
 import {
-    SiAntdesign, SiApollographql,
-    SiAxios,
-    SiCssmodules,
-    SiFigma, SiGraphql,
+    SiAntdesign,
     SiJest,
     SiMui,
     SiReacthookform,
     SiReactquery,
     SiReactrouter,
-    SiRedux, SiReduxsaga,
+    SiRedux,
     SiStyledcomponents,
-    SiWebpack,
     SiNextdotjs,
     SiTelegram,
     SiGithub,
-    SiLinkedin,
+    SiMaildotru
 } from 'react-icons/si';
 
 import {
-    TbBrandHtml5, TbBrandStorybook, TbBrandTypescript, TbBrandRadixUi
+   TbBrandStorybook, TbBrandTypescript, TbBrandRadixUi
 } from 'react-icons/tb';
-import {DiCss3Full, DiJavascript1, DiNpm, DiSass} from 'react-icons/di';
-import {BsGit} from 'react-icons/bs';
+import {DiJavascript1, DiSass} from 'react-icons/di';
 import {AiOutlineCloudServer} from 'react-icons/ai';
 
 export type SkillType = {
@@ -41,7 +36,7 @@ export const skills: SkillType[] = [
     },
     {
         title: 'Next',
-        icon: SiNextdotjs ,
+        icon: SiNextdotjs,
         color: '#fff',
     },
     {
@@ -55,34 +50,14 @@ export const skills: SkillType[] = [
         color: '#764abc',
     },
     {
-        title: 'Redux Saga',
-        icon: SiReduxsaga,
-        color: '#86d46b',
-    },
-    {
         title: 'TypeScript',
         icon: TbBrandTypescript,
         color: '#3077c5',
     },
     {
-        title: 'HTML',
-        icon: TbBrandHtml5,
-        color: '#c63',
-    },
-    {
-        title: 'CSS',
-        icon: DiCss3Full,
-        color: '#017dc8',
-    },
-    {
         title: 'SASS',
         icon: DiSass,
         color: '#cc6699',
-    },
-    {
-        title: 'CSS Modules',
-        icon: SiCssmodules,
-        color: '#fff',
     },
     {
         title: 'Radix UI',
@@ -130,55 +105,27 @@ export const skills: SkillType[] = [
         color: '#c53d17',
     },
     {
-        title: 'Axios',
-        icon: SiAxios,
-        color: '#5a29e4',
-    },
-    {
         title: 'REST API',
         icon: AiOutlineCloudServer,
         color: '#39a6dd',
     },
-    {
-        title: 'Git',
-        icon: BsGit,
-        color: '#f44c28',
-    },
-    {
-        title: 'Webpack',
-        icon: SiWebpack,
-        color: '#1c78c1',
-    },
-    {
-        title: 'Figma',
-        icon: SiFigma,
-        color: '#a259ff',
-    },
+
 ];
 
-export type SocialType ={
-    network:string
-    href:string
-    color:string
-    icon:IconType
+export type SocialType = {
+    network: string
+    href: string
+    icon: IconType
 }
 export const social = [
     {
         network: 'TG',
         href: 'https:/t.me/notMikle',
-        icon:SiTelegram,
-        color:'red'
-    },
-    {
-        network: 'LI',
-        href: 't.me',
-        icon:SiLinkedin,
-        color:'red'
+        icon: SiTelegram,
     },
     {
         network: 'Git',
         href: 'https:/github.com/notMikle',
-        icon:SiGithub,
-        color:'red'
-    }
+        icon: SiGithub,
+    },
 ]

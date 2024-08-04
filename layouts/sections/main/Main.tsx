@@ -7,13 +7,11 @@ import {
     Name,
     Photo,
     PhotoWrapper,
-    SmallText, SQR,
-    SQRwrapper,
+    SmallText,
     StyledMain,
     StyleH1,
     TextBlock
 } from '@/layouts/sections/main/MainStyled';
-import {Particle} from '@/layouts/sections/particle/Particle';
 
 export const Main: React.FC = () => {
     return (
@@ -36,13 +34,6 @@ export const Main: React.FC = () => {
                     </TextBlock>
                     <PhotoWrapper>
                         <Photo src={img.src} alt=""/>
-                        {/*<SQRwrapper>*/}
-                        {/*    <SQR $deg="105"></SQR>*/}
-                        {/*    <SQR $deg="120"></SQR>*/}
-                        {/*    <SQR $deg="135"></SQR>*/}
-                        {/*    <SQR $deg="150"></SQR>*/}
-                        {/*    <SQR $deg="165"></SQR>*/}
-                        {/*</SQRwrapper>*/}
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>

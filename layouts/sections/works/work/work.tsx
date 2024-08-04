@@ -6,27 +6,34 @@ import {FaLink} from 'react-icons/fa6';
 import proj from '@/assets/image/project2.png'
 import {Button} from '@/components/Button';
 import {theme} from '@/styles/theme';
+import {useRouter} from 'next/router';
 
 
 type WorkPropsType = {
     title: string
     description: string
-    src: string
+    srcProd: string
+    srcGit:string
     stack:string
+    image?:string
 }
 export const Work = (props: WorkPropsType) => {
+    const router = useRouter()
+    const linkHandler = () =>{
+        router.push(props.srcProd)
+    }
     return (
         <StyledWork>
             <ImageWrapper>
-                <Button>view</Button>
-                <Image src={proj.src} alt="ghb"/>
+                <Button onClick={linkHandler}>view</Button>
+                <Image src={props.image} alt="imageProject"/>
             </ImageWrapper>
             <Description>
                 <Title>{props.title}</Title>
                 <Text>{props.description}</Text>
                 <Text>{props.stack}</Text>
-                <Link href=""> <Icon icon={FaLink} size={'15px'} color={'#000'}></Icon><span>Demo</span></Link>
-                <Link href=""> <Icon icon={SiGithub} size={'15px'} color={'#000'}></Icon><span>Code</span></Link>
+                <Link href={props.srcProd}> <Icon icon={FaLink} size={'15px'} color={'#000'}></Icon><span>Demo</span></Link>
+                <Link href={props.srcGit}> <Icon icon={SiGithub} size={'15px'} color={'#000'}></Icon><span>Code</span></Link>
             </Description>
         </StyledWork>
     );
@@ -75,6 +82,8 @@ const StyledWork = styled.div`
 const ImageWrapper = styled.div`
   position: relative;
   ${Button}{
+      color: gray;
+      border: 1px gray solid;
     opacity: 0;
     position: absolute;
     left: 50%;
@@ -110,6 +119,7 @@ const ImageWrapper = styled.div`
   }
 `
 const Image = styled.img`
+    height: 200px;
   width: 100%;
   object-fit: cover;
 `

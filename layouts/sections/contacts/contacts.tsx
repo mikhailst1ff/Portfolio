@@ -4,16 +4,41 @@ import {SectionTitle} from '@/components/SectionTitle';
 import {Button} from '@/components/Button';
 import {Container} from '@/components/Container';
 import {theme} from '@/styles/theme';
+import {SubmitHandler, useForm} from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import {Inputs, schema, sendMessage} from '@/layouts/sections/contacts/sendMessage';
 
-export const Contacts = () => {
+export const ContactsContainer = () => {
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+    } = useForm<Inputs>(
+        {
+            resolver: yupResolver(schema)
+        }
+    )
+    const onSubmit: SubmitHandler<Inputs> = async (data) => {
+        try {
+            await sendMessage(data);
+            reset();
+        } catch (error) {
+            alert('Failed to send message');
+        }
+    }
+
     return (
         <StyledContacts id='contacts'>
             <Container>
                 <SectionTitle>Contacts</SectionTitle>
-                <StyledForm>
-                    <Field placeholder={'name'}></Field>
-                    <Field placeholder={'subject'}></Field>
-                    <Field placeholder={'message'} as={'textarea'}></Field>
+                <StyledForm onSubmit={handleSubmit(onSubmit)}>
+                    <Field placeholder={'name'}  {...register('name')}/>
+                    {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
+                    <Field placeholder={'phone'}  {...register('phone')}/>
+                    {errors.phone && <ErrorMessage>{errors.phone.message}</ErrorMessage>}
+                    <Field placeholder={'message'} as={'textarea'} {...register('message')}/>
+                    {errors.message && <ErrorMessage>{errors.message.message}</ErrorMessage>}
                     <Button type={'submit'}>send</Button>
                 </StyledForm>
             </Container>
@@ -56,3 +81,8 @@ const Field = styled.input`
     outline: 1px solid ${theme.colors.primaryBorder}
   }
 `
+const ErrorMessage = styled.span`
+    color: red;
+    font-size: 12px;
+    align-self: flex-start;
+`;

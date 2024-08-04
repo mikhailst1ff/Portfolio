@@ -4,7 +4,7 @@ import {Skills} from '@/layouts/sections/skils/Skils';
 import {Context, Social} from '@/context/Context';
 import {skills, social} from '@/data/data';
 import {Works} from '@/layouts/sections/works/Works';
-import {Contacts} from '@/layouts/sections/contacts/contacts';
+import {ContactsContainer} from '@/layouts/sections/contacts/contacts';
 import {Footer} from '@/layouts/sections/footer/Footer';
 import {GlobalStyle} from '@/styles/GlobalStyled';
 import {Particle} from '@/layouts/sections/particle/Particle';
@@ -22,7 +22,7 @@ export default function Home() {
                     <Main/>
                     <Skills/>
                     <Works/>
-                    <Contacts />
+                    <ContactsContainer />
                     <Footer/>
                 </Social.Provider>
             </Context.Provider>

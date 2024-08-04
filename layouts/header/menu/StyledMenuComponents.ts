@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 import {theme} from '@/styles/theme';
-import {Link} from 'react-scroll'
+import {Link as CustomLink} from 'react-scroll'
+import Link from 'next/link';
 
 export const StyledMenuMobile = styled.nav`
  
@@ -86,7 +87,7 @@ export const BurgerButton = styled.button<{ isOpen: boolean }>`
 `
 export const ListItem = styled.li`
 `
-export const NavLink = styled(Link)`
+export const NavLink = styled(CustomLink)`
   position: relative;
   display: inline-block;
   font-size: 20px;
@@ -114,7 +115,7 @@ export const NavLink = styled(Link)`
   }
 }
 `
-export const LinkSocial = styled.a`
+export const LinkSocial = styled(Link)`
   display: inline-block;
   color: ${theme.colors.secondaryText};
   padding-right: 20px;

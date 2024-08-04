@@ -4,6 +4,7 @@ import {SectionTitle} from '@/components/SectionTitle';
 import {Icon} from '@/components/icon/icon';
 import {Social} from '@/context/Context';
 import {theme} from '@/styles/theme';
+import Link from 'next/link';
 
 export const Footer = () => {
     const network = useContext(Social);
@@ -27,7 +28,7 @@ const SocialIconList = styled.ul`
   justify-content: center;
   gap: 30px;
 `
-const SocialIconLink = styled.a`
+const SocialIconLink = styled(Link)`
   cursor: pointer;
 `
 const Copyright = styled.small`

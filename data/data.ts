@@ -12,7 +12,6 @@ import {
     SiNextdotjs,
     SiTelegram,
     SiGithub,
-    SiMaildotru
 } from 'react-icons/si';
 
 import {
@@ -120,12 +119,12 @@ export type SocialType = {
 export const social = [
     {
         network: 'TG',
-        href: 'https:/t.me/notMikle',
+        href: "https://t.me/notMikle",
         icon: SiTelegram,
     },
     {
         network: 'Git',
-        href: 'https:/github.com/notMikle',
+        href: "https://github.com/notMikle",
         icon: SiGithub,
     },
 ]

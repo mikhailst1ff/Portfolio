@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {Icon} from '@/components/icon/icon';
 import {SiGithub} from 'react-icons/si';
 import {FaLink} from 'react-icons/fa6';
-import proj from '@/assets/image/project2.png'
 import {Button} from '@/components/Button';
 import {theme} from '@/styles/theme';
 import {useRouter} from 'next/router';
@@ -65,7 +64,7 @@ const Link = styled.a`
 `
 const StyledWork = styled.div`
   flex-grow: 1;
-  width: 350px;
+  max-width: 350px;
   //border-radius: 30px;
   background-color: rgb(255, 255, 255);
   color: black;
